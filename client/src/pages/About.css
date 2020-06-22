@@ -1,0 +1,35 @@
+.aboutGrid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 0;
+  background-color: #ddd;
+  justify-content: space-around;
+}
+
+.aboutItem {
+  position: relative;
+  background-color: #234;
+  margin: 1rem;
+  margin-top: 7rem;
+  color: white;
+  border-radius: 5px;
+  padding: 1rem;
+  max-width: 280px;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.aboutItem img {
+  height: 140px;
+  width: 140px;
+  object-fit: cover;
+  border-radius: 50000px;
+  position: absolute;
+  left: 84px;
+  top: -105px;
+}
+
+.aboutItem h1 {
+  font-family: "Raleway";
+  text-align: center;
+}
