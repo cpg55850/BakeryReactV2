@@ -7,38 +7,46 @@ import About from './pages/About';
 import News from './pages/News';
 import Contact from './pages/Contact';
 import Menu from './pages/Menu';
+import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
 
 import { Provider } from 'react-redux';
 import store from './store';
 
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import GlobalStyle from './GlobalStyle';
 
 const App = () => {
 	return (
 		<Router>
 			<Provider store={store}>
-				<div>
-					<Navbar />
-					<Switch>
-						<Route exact path='/'>
-							<Home />
-						</Route>
-						<Route exact path='/About'>
-							<About />
-						</Route>
-						<Route exact path='/News'>
-							<News />
-						</Route>
-						<Route exact path='/Contact'>
-							<Contact />
-						</Route>
-						<Route exact path='/Menu'>
-							<Menu />
-						</Route>
-					</Switch>
-					<Footer />
-				</div>
+				<Navbar />
+				<Switch>
+					<Route exact path='/'>
+						<Home />
+					</Route>
+					<Route exact path='/about'>
+						<About />
+					</Route>
+					<Route exact path='/news'>
+						<News />
+					</Route>
+					<Route exact path='/contact'>
+						<Contact />
+					</Route>
+					<Route exact path='/menu'>
+						<Menu />
+					</Route>
+					<Route exact path='/login'>
+						<Login />
+					</Route>
+					<Route exact path='/register'>
+						<Register />
+					</Route>
+				</Switch>
+				<Footer />
 			</Provider>
+			<GlobalStyle />
 		</Router>
 	);
 };

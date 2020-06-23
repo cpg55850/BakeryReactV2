@@ -1,7 +1,6 @@
 import React from 'react';
 import Column from '../components/Column';
-
-import './Contact.css';
+import styled from 'styled-components';
 
 const Contact = () => {
 	return (
@@ -11,8 +10,8 @@ const Contact = () => {
 				desc='Let us know what you think of our restaurant.'
 				bg='#007476'
 			/>
-			<div className='formGridContainer'>
-				<div className='formContainer'>
+			<Grid>
+				<FormContainer>
 					<form>
 						<label for='fname'>First Name</label>
 						<input
@@ -47,10 +46,22 @@ const Contact = () => {
 
 						<input type='submit' value='Submit' />
 					</form>
-				</div>
-			</div>
+				</FormContainer>
+			</Grid>
 		</>
 	);
 };
 
 export default Contact;
+
+const Grid = styled.div`
+	display: grid;
+	background-color: #f2f2f2;
+	grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+`;
+
+const FormContainer = styled.div`
+	grid-column: 2 / 4;
+	border-radius: 5px;
+	padding: 20px;
+`;
